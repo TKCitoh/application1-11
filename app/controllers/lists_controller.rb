@@ -4,6 +4,10 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
+  def index
+    @lists = List.all
+  end
+
    def create
     # １.&2. データを受け取り新規登録するためのインスタンス作成
     list = List.new(list_params)
