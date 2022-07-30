@@ -4,8 +4,8 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-  def index
-    @lists = List.all
+  def show
+    @list = List.find(params[:id])
   end
 
    def create
